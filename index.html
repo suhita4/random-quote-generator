@@ -18,7 +18,12 @@
     </div>
     <div class="buttons">
       <button class="button" onclick="newQuote()">New Quote</button>
-      <img src="mdi_content-copy.png" alt="copy quote" class="copy">
+      <img src="mdi_content-copy.png" alt="copy quote" class="copy" onclick="snackbar()">
+    </div>
+    <div class="snackbarFlex">
+      <div id="snackbar">
+        <img src="ic_round-done.png" alt="Done icon">
+        Copied to clipboard</div>
     </div>
   </div>
   <script src="script.js"></script>

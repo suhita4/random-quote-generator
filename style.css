@@ -64,7 +64,7 @@ h1 {
   color: #fff;
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -73,4 +73,81 @@ h1 {
   cursor: pointer;
   height: 32px;
   width: 32px;
+}
+
+.snackbarFlex {
+  display: flex;
+  justify-content: center;
+}
+
+#snackbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  background-color: #fff;
+  color: #00b899;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 16px;
+  position: fixed;
+  font-weight: 500;
+  z-index: 5;
+  bottom: 30px;
+}
+
+#snackbar img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }

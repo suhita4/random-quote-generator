@@ -76,3 +76,9 @@ function newQuote(){
   document.querySelector('.quoteOutput').textContent = `\"${quotes[randomNumber].quote}\"`;
   document.querySelector('.authorOutput').textContent = `- ${quotes[randomNumber].author}`;
 }
+
+function snackbar() {
+  let x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
